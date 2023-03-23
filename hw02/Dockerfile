@@ -1,4 +1,4 @@
-FROM python:3.8
+FROM python:3.8-slim
 
 RUN apt-get update
 RUN apt-get install texlive-latex-base -y && apt-get install graphviz -y

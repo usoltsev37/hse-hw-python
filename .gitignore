@@ -4,3 +4,9 @@
 .DS_Store
 .cache
 .mypy_cache
+
+LICENSE
+dist/
+build/
+setup.py
+visualization_ast_usoltsev.egg-info

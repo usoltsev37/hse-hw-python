@@ -1,8 +1,8 @@
-from visualization_ast_usoltsev.visualization import ASTVisualization
-import visualization_ast_usoltsev.fibonacci as fb
 import ast
 import inspect
 import os
+from hw01.fibonacci import fibonacci as fb
+from hw01.visualization import ASTVisualization
 
 
 def draw_table(table):
@@ -17,7 +17,7 @@ def draw_table(table):
             + f"\\begin{{center}}\n\\begin{{tabular}}{{{'|' + '|'.join(['c' for _ in range(cnt_cols)]) + '|'}}}\n\\hline\n" \
             + "\n".join(map(lambda row: " & ".join(str(value) for value in row) + " \\\\", table)) \
             + "\n\\hline\n\\end{tabular}\n\\end{center}\n"
-            + "\\begin{center}\n\\end{center}\n"
+            + "\\includegraphics[scale=0.05]{artifacts/ast.png}"
             + "\\end{document}"
         )
 
@@ -29,5 +29,5 @@ if __name__ == '__main__':
                 [1, -2, 3, 4]]
                )
 
-    os.system("pdflatex -halt-on-error -output-directory artifacts artifacts/hard.tex artifacts/ast.png")
+    os.system("pdflatex -halt-on-error -output-directory artifacts artifacts/hard.tex")
     os.system("rm artifacts/hard.aux artifacts/hard.log")
