@@ -8,7 +8,7 @@ THREADS = 10
 N = 4000
 
 
-def integrate(f, a, b, job_id=0, n_jobs=1, n_iter=1000):
+def integrate(f, a, b, job_id=0, n_jobs=1, n_iter=100000):
     start_time = current_time()
     acc = 0.0
     left = job_id * (n_iter // n_jobs)
