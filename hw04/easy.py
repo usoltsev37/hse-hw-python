@@ -3,7 +3,7 @@ from threading import Thread
 from time import time
 
 THREADS = 10
-N = 50000
+N = 100000
 
 
 def fibonacci(n: int):
